@@ -6,6 +6,7 @@ Temática del TPE: Autores y libros
 
 Breve descripción de la temática
 En la siguiente base de datos se mostrarán diversos autores de la literatura universal con algunas de sus obras detallando nombres, apellidos y fecha de nacimiento de estos autores; y nombre, fecha de publicación, género, precio y cantidad de hojas de cada libro mencionado.
+Además se agregó una tabla con datos sobre los inicios de sesión que realizan los lectores y que servirá para diferenciar usuarios comunes de administradores.
 
 
 
