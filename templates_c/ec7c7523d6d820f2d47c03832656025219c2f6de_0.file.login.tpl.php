@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.2, created on 2024-06-01 21:38:04
-  from 'C:\xampp\htdocs\Proyectos\ProyectosWeb2\literatura\templates\login.tpl' */
+/* Smarty version 4.5.2, created on 2024-06-02 03:59:48
+  from 'C:\xampp\htdocs\proyectos\literatura\templates\login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.2',
-  'unifunc' => 'content_665b789c132eb2_44351037',
+  'unifunc' => 'content_665bd21453c7e9_05884181',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '5be290de5815de026c8f46f16183e033cfb37802' => 
+    'ec7c7523d6d820f2d47c03832656025219c2f6de' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\Proyectos\\ProyectosWeb2\\literatura\\templates\\login.tpl',
-      1 => 1717270655,
+      0 => 'C:\\xampp\\htdocs\\proyectos\\literatura\\templates\\login.tpl',
+      1 => 1717270656,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:finHtml.tpl' => 1,
   ),
 ),false)) {
-function content_665b789c132eb2_44351037 (Smarty_Internal_Template $_smarty_tpl) {
+function content_665bd21453c7e9_05884181 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:inicio.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <form class="col-3 m-auto formAddTask" action="verificar_usuario" method="POST">

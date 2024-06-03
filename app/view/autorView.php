@@ -9,6 +9,15 @@ class autorView extends view{
     // var_dump ($autores); die;
     $this->smarty->assign("base", BASE_URL);
     $this->smarty->assign("autores", $autores);
-  $this->smarty->display("fichadeautor.tpl");
+  $this->smarty->display("autores.tpl");
   }
+
+  function verunAutor($autores){
+    $this->smarty->assign("base", BASE_URL);
+    $this->smarty->assign("autores", $autores);
+    $this->smarty->display("fichadeautor.tpl");
+    
+  }
+
+    
  }

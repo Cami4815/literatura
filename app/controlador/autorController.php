@@ -25,18 +25,9 @@ function verAutor(){
 
 }
 
-// function showAutor(){
-//     $autores=$this->model->getAutor();
-//     //buscar los autoree
-//     $this->view->mostrarAutor($autores);
-
-//  }
-
-
-
-// function deleteAutor(){
-//    $libro = $this->model->deleteAutor();
-//    $this->view->deleteAutor($autores);
-// }
-
+function verunAutor($id){
+    $un_autor=$this->model->mostrarunAutor($id);
+    //buscar los autoree
+    $this->view->verunAutor($un_autor);
+ }
 }

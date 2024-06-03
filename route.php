@@ -21,10 +21,16 @@ define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] 
             $controller=new loginController();
             $controller->login();
             break;
-            case 'verificar_usuario':
-                $controller=new loginController();
-                $controller->verificarLogin();
+        case 'verificar_usuario':
+            $controller=new loginController();
+            $controller->verificar_usuario();
                 break;
+
+        case 'CerrarSesion':
+            $controller=new loginController();
+            $controller->logout();
+                break;
+
         case 'libroTabla':
             
             $controller = new libroController();
@@ -36,29 +42,45 @@ define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] 
             $controller->verAutor();
          break;    
 
-        case 'insertLibro':
-        $controller= new libroController();
-        $controller-> insertLibro();
-        break;
+        case 'verunAutor':
+            $controller=new autorController();
+            $controller->verunAutor($parametro[1]);
+            break;
 
-        // case 'deleteAutor':
-        //     $controller= new autorController();
-        //     $controller-> deteleAutor();
-        //     break;
+        case 'verunAutorLibros':
+            $controller=new autorController();
+            $controller->verunAutorLibros($id);
+             break;
+
+        case 'insertLibro':
+            $controller= new libroController();
+            $controller-> insertLibro();
+            break;
 
         case 'mostrarLibro':
-        $controller = new libroController();
-        $controller->mostrarLibro();
+             $controller = new libroController();
+            $controller->mostrarLibro();
                 break;
         
         case 'delete':
-        $controller = new libroController();
-        $controller->deleteLibro($parametro[1]);
-                    break;
-        // break;
-        case 'verGenero':
-        $controller = new libroController();
-        $controller->verGenero($parametro[1]); 
+            $controller = new libroController();
+            $controller->deleteLibro($parametro[1]);
+                break;
+
+        case 'editar':
+            $controller = new libroController();
+             $controller->EditarLibro($parametro[1]); 
+        break;
+
+        case'getLibroId':
+            $controller =new libroController();
+            $controller->getLibroId($parametro);
+        break;
+
+        case 'verificarLibro':
+            $controller=new libroController();
+            $controller->verificarLibro();
+        break;
         
         case 'hash':
             $pass="admin";

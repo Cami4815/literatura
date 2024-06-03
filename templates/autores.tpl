@@ -1,15 +1,12 @@
 {include 'inicio.tpl'}
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title"></h5>
-    <div class="container col-12">
+<div class="container col-12">
       <table class="table table-success table-striped mt-2 text-center">
         <thead>
           <tr>
           <th scope="col">Nombre</th>
           <th scope="col">Apellido</th>
           <th scope="col">Nacimiento</th>
+          <th scope="col">Eliminar</th>
           
        
         </tr>
@@ -23,11 +20,13 @@
             <td>{$a->apellido} </td>
             <td>{$a->nacimiento} </td>
            <td>
+      
+               <a href='verunAutorLibros/{$a->id_libro}' action='libro' class='btn btn-success'>Ver libros del autor</a> 
+
+               </td>
           </tr>
            {/foreach}
+           <a href="libroTabla" class="btn btn-primary">Volver al inicio</a>
             
            {include "finHtml.tpl"}
-        <p class="card-text">Datos del Autor</p>
-    <a href="#" class="btn btn-primary stretched-link">ir al Inicio</a>
-  </div>
-</div>
+        

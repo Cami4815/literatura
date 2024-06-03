@@ -1,4 +1,17 @@
-{include 'formAddLibro.tpl'}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<base href={$base}>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Literatura</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="styles/styles.css">
+<body>
+{include 'inicio.tpl'}
+<a href="libroTabla" class="btn btn-primary">Volver al inicio</a>
+
 <div class="container col-12">
       <table class="table table-success table-striped mt-2 text-center">
         <thead>
@@ -9,8 +22,6 @@
           <th scope="col">Precio</th>
           <th scope="col">Cantidad de paginas</th>
           <th scope="col">Autor</th>
-          <th scope="col">Acciones</th>
-          
        
         </tr>
         </thead>
@@ -24,18 +35,12 @@
            <td>{$l->genero}</td>
             <td>{$l->precio}</td>
            <td>{$l->cantidad_pag}</td>
-            <td>{$l->id_autor}</td>
-            <td>
-                 <a href='verunAutor/{$l->id_autor}' action='autores' class='btn btn-success'>Ver autor</a>  
-               <a href='delete/{$l->id_libro}' class='btn btn-danger'>Eliminar</a>
-               <a href='editar/{$l->id_libro}' class='btn btn-danger'>Editar</a>
-
-               </td>
+            <td>{$l->id_autor}</td>  
+               
            </tr>
         {/foreach}
         </tbody>
      </table>
     </div>
+    
 {include 'finHtml.tpl'}
-
-   

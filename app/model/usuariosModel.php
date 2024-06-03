@@ -1,14 +1,14 @@
 <?php
-require_once 'conexion.php';
-class usuariosModel {
+require_once 'app/model/model.php';
+class usuariosModel extends model {
    
    
-    function getUsuario($name){
-    $db = createConexion();
+    public function getUsuario($name){
+    $db=$this->crearConexion();
 
     $sentencia = $db->prepare("SELECT * FROM inicio_sesion WHERE nombre = ?");
     $sentencia->execute([$name]);
-    $usuarios = $sentencia->fetch(PDO::FETCH_OBJ);
-    return $usuarios;
+    $usuario = $sentencia->fetch(PDO::FETCH_OBJ);
+    return $usuario;
  }
 }

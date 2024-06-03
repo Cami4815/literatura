@@ -21,25 +21,32 @@ class loginController{
 
 
     }
-    function verificarLogin(){
-        if($_SERVER["REQUEST_METHOD"] == "POST"){
-          
-            if(!empty($_POST['name']) && 
-                !empty($_POST['password'])){
-                    $name=$_POST['name'];
-                    $password=$_POST['password'];
-                    $users=$this->model->getUsuario($name);
-             
-                    if($users && password_verify($password,$users->contraseña)){
-                        // session_start();
-                        // $_SESSION['IS_LOGGED']=true;
-                        // $_SESSION['USERNAME']= $users->nombre;
-                        // $_SESSION['ROLE']= $users->rol;
+    function verificar_usuario(){
+     if($_SERVER['REQUEST_METHOD']=='POST'){
+            if(!empty($_POST['name'])&& !empty($_POST['contraseña'])){
+                $name = $_POST['name'];
+                $contraseña = $_POST['contraseña'];
+                $usuario = $this->model->getUsuario($name);
 
-                        header("location:" . BASE_URL . "libroTabla");
-                    }
-                }
+                if($usuario && password_verify($contraseña, $usuario->contraseña )){
 
+                    session_start();
+                    $_SESSION['USERNAME'] = $usuario->name;
+                    $_SESSION['IS_LOGGED'] = true;
+                    $_SESSION['ROLE'] = $usuario->rol;
+
+                    header("Location:" .BASE_URL. "libroTabla");
+
+             }
+         }
     }
- }
+
+     }
+ function logout(){
+    session_start();
+    session_destroy();
+    header("Location:" .BASE_URL. "login");
+   }
+      
+     
  }

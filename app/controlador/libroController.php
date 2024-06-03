@@ -42,18 +42,19 @@ function mostrarLibro(){
             isset($_POST['precio']) &&
         
             isset($_POST['paginas']) &&
-             
-             !empty($_POST['autor'])
+
+            isset($_POST['autor_libro'])
+
         ){
               $nombre = $_POST['nombre'];
               $fechadepublicacion =$_POST ['fecha'];
               $genero = $_POST['genero'];
               $precio =$_POST ['precio'];
               $cantidadepaginas = $_POST['paginas'];
-              $autor = $_POST['autor'];
+              $autores1 = $_POST['autor_libro'];
              
     
-              $libro=$this->model->insertLibro($nombre,$fechadepublicacion, $genero, $precio, $cantidadepaginas, $autor);
+              $this->model->insertLibro($nombre,$fechadepublicacion, $genero, $precio, $cantidadepaginas, $autores1);
               
               header("Location:".BASE_URL."libroTabla");
           }else{
@@ -63,15 +64,56 @@ function mostrarLibro(){
  }
  
         function deleteLibro($id){
-            $this->model->deleteLibro($id);
+            $libro_borrar=$this->model->deleteLibro($id);
          // Pasa el ID al método deleteLibro()
-            header("Location:".BASE_URL."home");
+            header("Location:".BASE_URL."libroTabla");
          
          }
-         function verGenero($id){
-            $genero=$this->model->verGenero($id);
-            $this->view->verGenero($genero);
-
+         function EditarLibro($id){ //LLEVA AL FORM PARA EDITAR EL LIBRO
+            $libro=$this->model->getLibroId($id);
+            $this->view->EditarLibro($libro);
+    
          }
+         function getLibroId($id){
+            $libro=$this->model->getLibroId($id);
+            // $this->view->getLibroId($id);
+         }
+
+         function verificarLibro(){
+
+            if($_SERVER["REQUEST_METHOD"] == "POST"){
+                  
+                if(!empty($_POST['nombre']) && 
+                    !empty($_POST['fecha']) &&
+                    !empty($_POST['genero']) && 
+        
+                    isset($_POST['precio']) &&
+                
+                    isset($_POST['paginas']) &&
+        
+                    isset($_POST['autor_libro'])
+        
+                ){
+                      $nombre = $_POST['nombre'];
+                      $fechadepublicacion =$_POST ['fecha'];
+                      $genero = $_POST['genero'];
+                      $precio =$_POST ['precio'];
+                      $cantidadepaginas = $_POST['paginas'];
+                      $autores1 = $_POST['autor_libro'];
+                     
+            
+                      $this->model->EditarLibro($nombre,$fechadepublicacion, $genero, $precio, $cantidadepaginas, $autores1, $id);
+                      header("Location:".BASE_URL."tablaLibros");
+                       }
          
      }
+
+      }
+      function verunAutorLibros($id){
+        $libros=$this->model->verunAutorLibros($id);
+        //buscar los autoree
+        $this->view->verunAutorLibros($libros);
+    
+   
+ } 
+ }

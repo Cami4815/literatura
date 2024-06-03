@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.2, created on 2024-06-03 03:04:33
-  from 'C:\xampp\htdocs\Proyectos\ProyectosWeb2\literatura\templates\formAddLibro.tpl' */
+/* Smarty version 4.5.2, created on 2024-06-03 01:32:56
+  from 'C:\xampp\htdocs\proyectos\literatura\templates\formAddLibro.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.2',
-  'unifunc' => 'content_665d16a172c3f2_77948965',
+  'unifunc' => 'content_665d0128408146_72601703',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'ec674856560166f3ddf168fe275b7c88e2446808' => 
+    'c69a1a5be43834a15ae6ca49516ede4f120bf0c1' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\Proyectos\\ProyectosWeb2\\literatura\\templates\\formAddLibro.tpl',
-      1 => 1717371174,
+      0 => 'C:\\xampp\\htdocs\\proyectos\\literatura\\templates\\formAddLibro.tpl',
+      1 => 1717371172,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:inicio.tpl' => 1,
   ),
 ),false)) {
-function content_665d16a172c3f2_77948965 (Smarty_Internal_Template $_smarty_tpl) {
+function content_665d0128408146_72601703 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:inicio.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <form class="col-3 m-auto formAddLibro" action="insertLibro" method="POST">

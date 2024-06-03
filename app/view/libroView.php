@@ -18,8 +18,22 @@ class libroView extends view{
   
        
         $this->smarty->assign("libro",$libro);
-        $this->smarty->display('libroTabla.tpl');
+        $this->smarty->display('libros.tpl');
   
 
       }
+      
+    function EditarLibro($libro){
+      $this->smarty->assign('libro', $libro);
+      $this->smarty->display('editarLibro.tpl');
      }
+     function verunAutorLibros($libros){
+      $this->smarty->assign("base", BASE_URL);
+      $this->smarty->assign("libro", $libro);
+      $this->smarty->display("fichadeLibros.tpl");
+      
+   }
+
+
+
+      }

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.2, created on 2024-06-03 03:04:33
-  from 'C:\xampp\htdocs\Proyectos\ProyectosWeb2\literatura\templates\libroTabla.tpl' */
+/* Smarty version 4.5.2, created on 2024-06-03 02:18:11
+  from 'C:\xampp\htdocs\proyectos\literatura\templates\libroTabla.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.2',
-  'unifunc' => 'content_665d16a13d0ac8_18771778',
+  'unifunc' => 'content_665d0bc33b07d6_74033863',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '2fb0e742df7b93057a56cee924f2cc42b7f2783b' => 
+    'c16f87f02fbdbf0b5cdc843cdda6b8a637037ebb' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\Proyectos\\ProyectosWeb2\\literatura\\templates\\libroTabla.tpl',
-      1 => 1717373886,
+      0 => 'C:\\xampp\\htdocs\\proyectos\\literatura\\templates\\libroTabla.tpl',
+      1 => 1717373884,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:finHtml.tpl' => 1,
   ),
 ),false)) {
-function content_665d16a13d0ac8_18771778 (Smarty_Internal_Template $_smarty_tpl) {
+function content_665d0bc33b07d6_74033863 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:formAddLibro.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <div class="container col-12">

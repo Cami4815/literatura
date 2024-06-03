@@ -1,4 +1,4 @@
-{include 'formAddLibro.tpl'}
+{include 'inicio.tpl'}
 <div class="container col-12">
       <table class="table table-success table-striped mt-2 text-center">
         <thead>
@@ -9,8 +9,6 @@
           <th scope="col">Precio</th>
           <th scope="col">Cantidad de paginas</th>
           <th scope="col">Autor</th>
-          <th scope="col">Acciones</th>
-          
        
         </tr>
         </thead>
@@ -24,18 +22,13 @@
            <td>{$l->genero}</td>
             <td>{$l->precio}</td>
            <td>{$l->cantidad_pag}</td>
-            <td>{$l->id_autor}</td>
-            <td>
-                 <a href='verunAutor/{$l->id_autor}' action='autores' class='btn btn-success'>Ver autor</a>  
-               <a href='delete/{$l->id_libro}' class='btn btn-danger'>Eliminar</a>
-               <a href='editar/{$l->id_libro}' class='btn btn-danger'>Editar</a>
-
-               </td>
+            <td>{$l->id_autor}</td>  
+               
            </tr>
         {/foreach}
         </tbody>
      </table>
     </div>
+    <a href="libroTabla" class="btn btn-primary">Volver al inicio</a>
+    
 {include 'finHtml.tpl'}
-
-   
