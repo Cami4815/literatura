@@ -20,10 +20,8 @@
             <td>{$a->apellido} </td>
             <td>{$a->nacimiento} </td>
            <td>
-      
-               <a href='verunAutorLibros/{$a->id_autor1}' action='libros' class='btn btn-success'>Ver libros del autor</a> 
-
-               </td>
+              <a href='verunAutorLibros/{$a->id_autor1}' action='libros' class='btn btn-success'>Ver libros del autor</a> 
+            </td>
           </tr>
            {/foreach}
            <a href="libroTabla" class="btn btn-primary">Volver al inicio</a>

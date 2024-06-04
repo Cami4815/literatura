@@ -19,10 +19,7 @@ public function __construct()
 function verAutor(){
  
     $autores = $this->model->verAutor();
-   
     $this->view->tablaAutor($autores);
-
-
 }
 
 function verunAutor($id){

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.2, created on 2024-06-04 03:53:58
+/* Smarty version 4.5.2, created on 2024-06-04 05:09:51
   from 'C:\xampp\htdocs\Proyectos\ProyectosWeb2\literatura\templates\autores.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.2',
-  'unifunc' => 'content_665e73b64eac32_78811959',
+  'unifunc' => 'content_665e857fe9f8f0_03850683',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '94ddfd975c675ebab27480d298a6645d704a723a' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Proyectos\\ProyectosWeb2\\literatura\\templates\\autores.tpl',
-      1 => 1717466030,
+      1 => 1717470530,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:finHtml.tpl' => 1,
   ),
 ),false)) {
-function content_665e73b64eac32_78811959 (Smarty_Internal_Template $_smarty_tpl) {
+function content_665e857fe9f8f0_03850683 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:inicio.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <div class="container col-12">
@@ -54,11 +54,9 @@ $_smarty_tpl->tpl_vars['a']->do_else = false;
             <td><?php echo $_smarty_tpl->tpl_vars['a']->value->nacimiento;?>
  </td>
            <td>
-      
-               <a href='verunAutorLibros/<?php echo $_smarty_tpl->tpl_vars['a']->value->id_autor1;?>
+              <a href='verunAutorLibros/<?php echo $_smarty_tpl->tpl_vars['a']->value->id_autor1;?>
 ' action='libros' class='btn btn-success'>Ver libros del autor</a> 
-
-               </td>
+            </td>
           </tr>
            <?php
 }

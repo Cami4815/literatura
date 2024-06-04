@@ -13,17 +13,14 @@
         </tr>
         </thead>
       <tbody>
-    
-  
         {foreach $libro as $l }
-            <tr>
+          <tr>
             <td>{$l->nombre}</td>
-           <td>{$l->fecha_publicacion} </td>
-           <td>{$l->genero}</td>
+            <td>{$l->fecha_publicacion} </td>
+            <td>{$l->genero}</td>
             <td>{$l->precio}</td>
-           <td>{$l->cantidad_pag}</td>
-            <td>{$l->id_autor}</td>  
-               
+            <td>{$l->cantidad_pag}</td>
+            <td>{$l->id_autor}</td>       
            </tr>
         {/foreach}
         </tbody>

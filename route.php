@@ -54,7 +54,6 @@ define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] 
         case 'editar':
             $controller = new libroController();
             $controller->EditarLibro($parametro[1]);
-            var_dump ($parametro[1]);
             break;
 
         case'getLibroId':
