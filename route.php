@@ -58,7 +58,7 @@ define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] 
 
         case'getLibroId':
             $controller =new libroController();
-            $controller->getLibroId($parametro);
+            $controller->getLibroId($parametro[1]);
             break;
 
         case 'verificarLibro':

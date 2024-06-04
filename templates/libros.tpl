@@ -34,7 +34,7 @@
               <td>{$l->precio}</td>
               <td>{$l->cantidad_pag}</td>
               <td>{$l->id_autor}</td>  
-              <td><a href='getLibroId/{$l->id_libro}' class='btn btn-danger'> Ver Destalles </a></td>  
+              <td><a href='getLibroId/{$l->id_libro}' class='btn btn-danger'> Ver Destalles</a></td>  
            </tr>
         {/foreach}
         </tbody>

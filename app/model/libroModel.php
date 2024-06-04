@@ -49,7 +49,7 @@ class libroModel extends model{
             $db=$this->crearConexion();
             $sentencia = $db->prepare("SELECT * FROM libro WHERE id_autor = ?");
                 $sentencia->execute([$id]);
-                $varios_libros = $sentencia->fetch(PDO::FETCH_OBJ);
+                $varios_libros = $sentencia->fetchAll(PDO::FETCH_OBJ);
                 return $varios_libros;
          }
       

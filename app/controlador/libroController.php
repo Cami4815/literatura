@@ -83,9 +83,13 @@ class libroController
 
     }
     function getLibroId($id)
-    {
+
+
+    {   
+        
         $libro = $this->model->getLibroId($id);
         $this->view->getLibroId($libro);
+
     }
 
     function verificarLibro($id)
@@ -114,15 +118,13 @@ class libroController
 
 
                 $this->model->EditarLibro($nombre, $fechadepublicacion, $genero, $precio, $cantidadepaginas, $autores1, $id);
-                header("Location:" . BASE_URL . "tablaLibros");
+                header("Location:" . BASE_URL . "libroTabla");
             }
         }
 
     }
-    function verunAutorLibros($id)
-    {
+    function verunAutorLibros($id) {
         $varios_libros = $this->model->verunAutorLibros($id);
-
         $this->view->verunAutorLibros($varios_libros);
 
     }
