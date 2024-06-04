@@ -1,11 +1,7 @@
-table{
-    mixin gradient-x($start-color: $gray-700, $end-color: $gray-800, $start-percent: 0%, $end-percent: 100%) {
-        background-image: linear-gradient(to right, $start-color $start-percent, $end-color $end-percent);
-      }
+body{
+  background-color:palevioletred;
 }
-.card{
-  mixin gradient-x($start-color: $gray-700, $end-color: $gray-800, $start-percent: 0%, $end-percent: 100%) {
-  background-image: linear-gradient(to right, $start-color $start-percent, $end-color $end-percent);
 
+.nav{
+  background-color:pink;
 }
- }

@@ -22,21 +22,17 @@
           <th scope="col">Precio</th>
           <th scope="col">Cantidad de paginas</th>
           <th scope="col">Autor</th>
-          <th scope="col">Ver Libro</th>
         </tr>
         </thead>
       <tbody>
-        {foreach $libro as $l }
             <tr>
-              <td>{$l->nombre}</td>
-              <td>{$l->fecha_publicacion} </td>
-              <td>{$l->genero}</td>
-              <td>{$l->precio}</td>
-              <td>{$l->cantidad_pag}</td>
-              <td>{$l->id_autor}</td>  
-              <td><a href='getLibroId/{$l->id_libro}' class='btn btn-danger'> Ver Destalles </a></td>  
+              <td>{$libro->nombre}</td>
+              <td>{$libro->fecha_publicacion} </td>
+              <td>{$libro->genero}</td>
+              <td>{$libro->precio}</td>
+              <td>{$libro->cantidad_pag}</td>
+              <td>{$libro->id_autor}</td>   
            </tr>
-        {/foreach}
         </tbody>
      </table>
     </div>

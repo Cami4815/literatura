@@ -6,7 +6,7 @@
           <th scope="col">Nombre</th>
           <th scope="col">Apellido</th>
           <th scope="col">Nacimiento</th>
-          <th scope="col">Eliminar</th>
+          <th scope="col">Libros</th>
           
        
         </tr>
@@ -21,7 +21,7 @@
             <td>{$a->nacimiento} </td>
            <td>
       
-               <a href='verunAutorLibros/{$a->id_libro}' action='libro' class='btn btn-success'>Ver libros del autor</a> 
+               <a href='verunAutorLibros/{$a->id_autor1}' action='libros' class='btn btn-success'>Ver libros del autor</a> 
 
                </td>
           </tr>

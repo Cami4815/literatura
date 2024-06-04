@@ -26,7 +26,7 @@
            <td>{$l->cantidad_pag}</td>
             <td>{$l->id_autor}</td>
             <td>
-                 <a href='verunAutor/{$l->id_autor}' action='autores' class='btn btn-success'>Ver autor</a>  
+              <a href='verunAutor/{$l->id_autor}' action='autores' class='btn btn-success'>Ver autor</a>  
                <a href='delete/{$l->id_libro}' class='btn btn-danger'>Eliminar</a>
                <a href='editar/{$l->id_libro}' class='btn btn-danger'>Editar</a>
 

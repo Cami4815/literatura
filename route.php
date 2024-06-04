@@ -24,23 +24,53 @@ define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] 
         case 'verificar_usuario':
             $controller=new loginController();
             $controller->verificar_usuario();
-                break;
+            break;
 
-        case 'CerrarSesion':
-            $controller=new loginController();
+        case 'logout': 
+            $controller = new loginController();
             $controller->logout();
-                break;
+            break;
 
         case 'libroTabla':
-            
             $controller = new libroController();
             $controller->mostrarTabla();
          break;
 
-        case 'autores':
+        case 'mostrarLibro':
+            $controller = new libroController();
+            $controller->mostrarLibro();
+            break;
+
+        case 'insertLibro':
+            $controller= new libroController();
+            $controller-> insertLibro();
+            break;
+        
+        case 'delete':
+            $controller = new libroController();
+            $controller->deleteLibro($parametro[1]);
+             break;
+
+        case 'editar':
+            $controller = new libroController();
+            $controller->EditarLibro($parametro[1]);
+            var_dump ($parametro[1]);
+            break;
+
+        case'getLibroId':
+            $controller =new libroController();
+            $controller->getLibroId($parametro);
+            break;
+
+        case 'verificarLibro':
+            $controller=new libroController();
+            $controller->verificarLibro($parametro[1]);
+            break;
+            
+            case 'autores':
             $controller = new autorController();
             $controller->verAutor();
-         break;    
+            break;    
 
         case 'verunAutor':
             $controller=new autorController();
@@ -48,39 +78,9 @@ define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] 
             break;
 
         case 'verunAutorLibros':
-            $controller=new autorController();
-            $controller->verunAutorLibros($id);
-             break;
-
-        case 'insertLibro':
-            $controller= new libroController();
-            $controller-> insertLibro();
-            break;
-
-        case 'mostrarLibro':
-             $controller = new libroController();
-            $controller->mostrarLibro();
-                break;
-        
-        case 'delete':
-            $controller = new libroController();
-            $controller->deleteLibro($parametro[1]);
-                break;
-
-        case 'editar':
-            $controller = new libroController();
-             $controller->EditarLibro($parametro[1]); 
-        break;
-
-        case'getLibroId':
-            $controller =new libroController();
-            $controller->getLibroId($parametro);
-        break;
-
-        case 'verificarLibro':
             $controller=new libroController();
-            $controller->verificarLibro();
-        break;
+            $controller->verunAutorLibros($parametro[1]);
+             break;
         
         case 'hash':
             $pass="admin";
@@ -90,7 +90,7 @@ define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] 
       
         
 
-    default:
-        echo('404 Page not found');
-        break;
+        default:
+            echo('404 Page not found');
+            break;
 }

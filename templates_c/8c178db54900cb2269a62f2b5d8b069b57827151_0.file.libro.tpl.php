@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.2, created on 2024-06-04 04:31:34
-  from 'C:\xampp\htdocs\Proyectos\ProyectosWeb2\literatura\templates\libros.tpl' */
+/* Smarty version 4.5.2, created on 2024-06-04 04:39:21
+  from 'C:\xampp\htdocs\Proyectos\ProyectosWeb2\literatura\templates\libro.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.2',
-  'unifunc' => 'content_665e7c86af5544_21079250',
+  'unifunc' => 'content_665e7e5942eaa8_25880030',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '52ba50d6faf5267c77e7fee1f70a3159c7700cb5' => 
+    '8c178db54900cb2269a62f2b5d8b069b57827151' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\Proyectos\\ProyectosWeb2\\literatura\\templates\\libros.tpl',
-      1 => 1717468060,
+      0 => 'C:\\xampp\\htdocs\\Proyectos\\ProyectosWeb2\\literatura\\templates\\libro.tpl',
+      1 => 1717468750,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:finHtml.tpl' => 1,
   ),
 ),false)) {
-function content_665e7c86af5544_21079250 (Smarty_Internal_Template $_smarty_tpl) {
+function content_665e7e5942eaa8_25880030 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,35 +49,23 @@ function content_665e7c86af5544_21079250 (Smarty_Internal_Template $_smarty_tpl)
           <th scope="col">Precio</th>
           <th scope="col">Cantidad de paginas</th>
           <th scope="col">Autor</th>
-          <th scope="col">Ver Libro</th>
         </tr>
         </thead>
       <tbody>
-        <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['libro']->value, 'l');
-$_smarty_tpl->tpl_vars['l']->do_else = true;
-if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['l']->value) {
-$_smarty_tpl->tpl_vars['l']->do_else = false;
-?>
             <tr>
-              <td><?php echo $_smarty_tpl->tpl_vars['l']->value->nombre;?>
+              <td><?php echo $_smarty_tpl->tpl_vars['libro']->value->nombre;?>
 </td>
-              <td><?php echo $_smarty_tpl->tpl_vars['l']->value->fecha_publicacion;?>
+              <td><?php echo $_smarty_tpl->tpl_vars['libro']->value->fecha_publicacion;?>
  </td>
-              <td><?php echo $_smarty_tpl->tpl_vars['l']->value->genero;?>
+              <td><?php echo $_smarty_tpl->tpl_vars['libro']->value->genero;?>
 </td>
-              <td><?php echo $_smarty_tpl->tpl_vars['l']->value->precio;?>
+              <td><?php echo $_smarty_tpl->tpl_vars['libro']->value->precio;?>
 </td>
-              <td><?php echo $_smarty_tpl->tpl_vars['l']->value->cantidad_pag;?>
+              <td><?php echo $_smarty_tpl->tpl_vars['libro']->value->cantidad_pag;?>
 </td>
-              <td><?php echo $_smarty_tpl->tpl_vars['l']->value->id_autor;?>
-</td>  
-              <td><a href='getLibroId/<?php echo $_smarty_tpl->tpl_vars['l']->value->id_libro;?>
-' class='btn btn-danger'> Ver Destalles </a></td>  
+              <td><?php echo $_smarty_tpl->tpl_vars['libro']->value->id_autor;?>
+</td>   
            </tr>
-        <?php
-}
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         </tbody>
      </table>
     </div>

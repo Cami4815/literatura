@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.2, created on 2024-06-03 06:53:46
+/* Smarty version 4.5.2, created on 2024-06-04 02:08:56
   from 'C:\xampp\htdocs\Proyectos\ProyectosWeb2\literatura\templates\fichadeautor.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.2',
-  'unifunc' => 'content_665d4c5af3d5b3_64635028',
+  'unifunc' => 'content_665e5b18007f84_41510113',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3e41d325989ea9c65e8f6f46d66406afd8b8cacf' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Proyectos\\ProyectosWeb2\\literatura\\templates\\fichadeautor.tpl',
-      1 => 1717390415,
+      1 => 1717459674,
       2 => 'file',
     ),
   ),
@@ -22,13 +22,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:finHtml.tpl' => 1,
   ),
 ),false)) {
-function content_665d4c5af3d5b3_64635028 (Smarty_Internal_Template $_smarty_tpl) {
+function content_665e5b18007f84_41510113 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:inicio.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title"></h5>
     <div class="container col-12">
       <table class="table table-success table-striped mt-2 text-center">
         <thead>
@@ -64,9 +60,10 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             
            <?php $_smarty_tpl->_subTemplateRender("file:finHtml.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
-        <p class="card-text">Datos del Autor</p>
+        
     <a href="#" class="btn btn-primary stretched-link">ir al Inicio</a>
-  </div>
+    <h3>Datos del Autor</h3>
+    </div>
 </div>
 <?php }
 }

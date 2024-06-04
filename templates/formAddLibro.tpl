@@ -25,7 +25,8 @@
       <div class="mb-3">
       <label class="form-label">Autor</label>
       <select name="autor_libro" class="form-control" placeholder="Ingrese autor">
-      <option>1</option>
+
+       <option>1</option>
       <option>2</option>
       <option>3</option>
       <option>4</option>
@@ -33,9 +34,8 @@
       <option>6</option>
       <option>7</option>
       <option>8</option>
-      <option>9</option>
-               
-          </select>
+      <option>9</option>         
+      </select>
       </div>
       
       <button type="submit" class="btn btn-primary col-12">Submit</button>

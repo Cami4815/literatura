@@ -1,5 +1,5 @@
 {include "inicio.tpl"}
-<form class="col-3 m-auto" action="verificarLibro" method="POST">
+<form class="col-3 m-auto" action="editar" method="POST">
     
       <legend class="text-center">Editar libro</legend>
       <div class="mb-3">
@@ -25,6 +25,7 @@
       <div class="mb-3">
         <label class="form-label">Autor</label>
         <select name="autor_libro" class="form-control" value="{$libro->id_autor}">
+
         <option>1</option>
         <option>2</option>
         <option>3</option>

@@ -36,12 +36,17 @@ class loginController{
                     $_SESSION['ROLE'] = $usuario->rol;
 
                     header("Location:" .BASE_URL. "libroTabla");
+                    die();
+                }else{
+                    $this->view->loginView("usuario incorrecto");
+                }
+            }else{
+                $this->view->loginView("faltan datos obligatorios");
 
              }
-         }
-    }
-
+             }
      }
+     
  function logout(){
     session_start();
     session_destroy();

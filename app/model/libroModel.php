@@ -19,19 +19,18 @@ class libroModel extends model{
             //Enviar la consulta
             $resultado= $db->prepare("INSERT INTO libro (nombre,fecha_publicacion,genero,precio,cantidad_pag, id_autor) VALUES (?,?,?,?,?,?)");
             $resultado->execute([$nombre,$fechadepublicacion, $genero, $precio, $cantidadepaginas, $autores1,]);
-            return $libro; // ejecuta
+
         }
         
         function deleteLibro($id){
             $db=$this->crearConexion();
             $resultado= $db->prepare("DELETE FROM libro WHERE id_libro = ?");
             $resultado->execute([$id]);
-            return $libro;
         }
 
         function EditarLibro($nombre, $fechadepublicacion, $genero, $precio, $cantidadepaginas, $autores1, $id){
             $db=$this->crearConexion();
-            $resultado= $db->prepare("UPDATE libro SET nombre = ?, fecha_publicacion = ?, genero = ?, precio = ?,  cantidad_pag = ?, id_autor = ? WHERE id_libro = ?");
+            $resultado= $db->prepare("UPDATE  libro SET nombre = ?, fecha_publicacion = ?, genero = ?, precio = ?,  cantidad_pag = ?, id_autor = ? WHERE id_libro = ?");
             $resultado->execute([$nombre, $fechadepublicacion, $genero, $precio, $cantidadepaginas, $autores1, $id]);
 
             }
@@ -46,12 +45,12 @@ class libroModel extends model{
         return $libro;
          } 
 
-         function verunAutorLibros(){ 
+         function verunAutorLibros($id){ 
             $db=$this->crearConexion();
-            $sentencia = $db->prepare("SELECT * FROM libros l WHERE l.id_libro = ? ");
+            $sentencia = $db->prepare("SELECT * FROM libro WHERE id_autor = ?");
                 $sentencia->execute([$id]);
-                $libros = $sentencia->fetchAll(PDO::FETCH_OBJ);
-                return $libros;
+                $varios_libros = $sentencia->fetch(PDO::FETCH_OBJ);
+                return $varios_libros;
          }
       
         function mostrarLibro(){ 
