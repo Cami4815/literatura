@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.2, created on 2024-06-04 05:12:29
+/* Smarty version 4.5.2, created on 2024-06-04 17:24:26
   from 'C:\xampp\htdocs\Proyectos\ProyectosWeb2\literatura\templates\libroTabla.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.2',
-  'unifunc' => 'content_665e861dd43669_38840974',
+  'unifunc' => 'content_665f31aaac6574_97949350',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2fb0e742df7b93057a56cee924f2cc42b7f2783b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Proyectos\\ProyectosWeb2\\literatura\\templates\\libroTabla.tpl',
-      1 => 1717470456,
+      1 => 1717474048,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:finHtml.tpl' => 1,
   ),
 ),false)) {
-function content_665e861dd43669_38840974 (Smarty_Internal_Template $_smarty_tpl) {
+function content_665f31aaac6574_97949350 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:formAddLibro.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <div class="container col-12">
@@ -67,8 +67,6 @@ $_smarty_tpl->tpl_vars['l']->do_else = false;
 ' action='autores' class='btn btn-success'>Ver autor</a>  
               <a href='delete/<?php echo $_smarty_tpl->tpl_vars['l']->value->id_libro;?>
 ' class='btn btn-danger'>Eliminar</a>
-              <a href='editar/<?php echo $_smarty_tpl->tpl_vars['l']->value->id_libro;?>
-' class='btn btn-danger'>Editar</a>
               </td>
            </tr>
         <?php

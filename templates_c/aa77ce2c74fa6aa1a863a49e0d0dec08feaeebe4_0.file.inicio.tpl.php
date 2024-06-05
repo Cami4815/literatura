@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.2, created on 2024-06-04 01:09:40
+/* Smarty version 4.5.2, created on 2024-06-05 03:08:04
   from 'C:\xampp\htdocs\Proyectos\ProyectosWeb2\literatura\templates\inicio.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.2',
-  'unifunc' => 'content_665e4d3432e520_99874468',
+  'unifunc' => 'content_665fba74bb9cb9_51462821',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'aa77ce2c74fa6aa1a863a49e0d0dec08feaeebe4' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Proyectos\\ProyectosWeb2\\literatura\\templates\\inicio.tpl',
-      1 => 1717456176,
+      1 => 1717549680,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_665e4d3432e520_99874468 (Smarty_Internal_Template $_smarty_tpl) {
+function content_665fba74bb9cb9_51462821 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,6 +34,16 @@ function content_665e4d3432e520_99874468 (Smarty_Internal_Template $_smarty_tpl)
     <link rel="stylesheet" href="styles/styles.css">
 <body>
 <nav class="nav nav-pills flex-column flex-sm-row">
+
+<?php if ($_smarty_tpl->tpl_vars['usuario']->value == 'administrador') {?>  
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
+    data-toggle="dropdown" aria-expanded="false">Agregar</a>
+      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <li><a class="dropdown-item" href="libroTabla">Vehiculo</a></li>
+              </ul>
+      </li>
+  <?php }?>
  
 
 <?php if ($_smarty_tpl->tpl_vars['loageado']->value) {?>

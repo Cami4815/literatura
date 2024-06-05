@@ -82,10 +82,7 @@ class libroController
 
 
     }
-    function getLibroId($id)
-
-
-    {   
+    function getLibroId($id) {   
         
         $libro = $this->model->getLibroId($id);
         $this->view->getLibroId($libro);
