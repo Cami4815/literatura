@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.2, created on 2024-06-04 04:55:06
+/* Smarty version 4.5.2, created on 2024-06-05 03:53:27
   from 'C:\xampp\htdocs\Proyectos\ProyectosWeb2\literatura\templates\formAddLibro.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.2',
-  'unifunc' => 'content_665e820aad44d2_73096239',
+  'unifunc' => 'content_665fc517974ab1_52415975',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ec674856560166f3ddf168fe275b7c88e2446808' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Proyectos\\ProyectosWeb2\\literatura\\templates\\formAddLibro.tpl',
-      1 => 1717469686,
+      1 => 1717552333,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:inicio.tpl' => 1,
   ),
 ),false)) {
-function content_665e820aad44d2_73096239 (Smarty_Internal_Template $_smarty_tpl) {
+function content_665fc517974ab1_52415975 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:inicio.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <form class="col-3 m-auto formAddLibro" action="insertLibro" method="POST">

@@ -9,7 +9,7 @@
           <th scope="col">Precio</th>
           <th scope="col">Cantidad de paginas</th>
           <th scope="col">Autor</th>
-          <th scope="col">Acciones</th>
+  
           
        
         </tr>
@@ -26,10 +26,11 @@
            <td>{$l->cantidad_pag}</td>
             <td>{$l->id_autor}</td>
             <td>
+          {if $usuario == 'administrador'}
               <a href='verunAutor/{$l->id_autor}' action='autores' class='btn btn-success'>Ver autor</a>  
               <a href='delete/{$l->id_libro}' class='btn btn-danger'>Eliminar</a>
               </td>
-           </tr>
+                         {/if}
         {/foreach}
         </tbody>
      </table>

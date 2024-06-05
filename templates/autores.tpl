@@ -21,7 +21,12 @@
             <td>{$a->nacimiento} </td>
            <td>
               <a href='verunAutorLibros/{$a->id_autor1}' action='libros' class='btn btn-success'>Ver libros del autor</a> 
-            </td>
+              <a href='eliminarAutor/{$a->id_autor1}' action='libros' class='btn btn-success'>Borrar </a> 
+              <a href='insertarAutor/{$a->id_autor1}' action='autores' class='btn btn-success'>Insertar Autor</a> 
+              <a href='verunAutorLibros/{$a->id_autor1}' action='libros' class='btn btn-success'>Editar Autor</a> 
+
+            
+              </td>
           </tr>
            {/foreach}
            <a href="libroTabla" class="btn btn-primary">Volver al inicio</a>

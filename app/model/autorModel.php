@@ -10,6 +10,11 @@ class autorModel extends model{
             $sentencia->execute();
             $autores = $sentencia->fetchAll(PDO::FETCH_OBJ);
             return $autores;
+    }   
+    function eliminarAutor($id){
+        $db=$this->crearConexion();
+        $resultado= $db->prepare("DELETE FROM autor WHERE id_autor1 = ?");
+        $resultado->execute([$id]);
     }
   
 
@@ -22,6 +27,14 @@ class autorModel extends model{
             $un_autor = $sentencia->fetchAll(PDO::FETCH_OBJ);
             return $un_autor;
         }
-    
+        function insertarAutor($nombre,$apellido, $nacimiento){
+            //abrimos la conexion;
+            $db=$this->crearConexion();
+           
+            //Enviar la consulta
+            $resultado= $db->prepare("INSERT INTO autor (nombre,apellido,nacimiento) VALUES (?,?,?)");
+            $resultado->execute([$nombre,$apellido, $nacimiento]);
+
+        }
      }
         

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.2, created on 2024-06-04 05:38:38
+/* Smarty version 4.5.2, created on 2024-06-05 03:48:54
   from 'C:\xampp\htdocs\Proyectos\ProyectosWeb2\literatura\templates\libros.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.2',
-  'unifunc' => 'content_665e8c3edfea90_65297288',
+  'unifunc' => 'content_665fc4068533e4_10791304',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '52ba50d6faf5267c77e7fee1f70a3159c7700cb5' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Proyectos\\ProyectosWeb2\\literatura\\templates\\libros.tpl',
-      1 => 1717472277,
+      1 => 1717552108,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:finHtml.tpl' => 1,
   ),
 ),false)) {
-function content_665e8c3edfea90_65297288 (Smarty_Internal_Template $_smarty_tpl) {
+function content_665fc4068533e4_10791304 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -73,7 +73,7 @@ $_smarty_tpl->tpl_vars['l']->do_else = false;
               <td><?php echo $_smarty_tpl->tpl_vars['l']->value->id_autor;?>
 </td>  
               <td><a href='getLibroId/<?php echo $_smarty_tpl->tpl_vars['l']->value->id_libro;?>
-' class='btn btn-danger'> Ver Destalles</a></td>  
+' class='btn btn-danger'> Ver Detalles</a></td>  
            </tr>
         <?php
 }

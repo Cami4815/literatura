@@ -27,4 +27,33 @@ function verunAutor($id){
     //buscar los autoree
     $this->view->verunAutor($un_autor);
  }
+ function eliminarAutor($id)
+    {
+        $autor_borrar = $this->model->eliminarAutor($id);
+        // Pasa el ID al método deleteLibro()
+        header("Location:" . BASE_URL . "autores");
+
+    }
+
+    function insertarAutor(){
+
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+            if (
+                !empty($_POST['nombre']) &&
+                !empty($_POST['apellido']) &&
+                !empty($_POST['nacimiento'])
+
+            ) {
+                $nombre = $_POST['nombre'];
+                $apellido = $_POST['apellido'];
+                $nacimiento = $_POST['nacimiento'];
+                $this->model->insertarAutor($nombre, $apellido, $nacimiento);
+
+                header("Location:" . BASE_URL . "autores");
+            } else {
+                echo "faltan datos";
+            }
+        }
 }
+ }

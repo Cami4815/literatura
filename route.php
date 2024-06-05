@@ -80,6 +80,17 @@ define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] 
             $controller=new libroController();
             $controller->verunAutorLibros($parametro[1]);
              break;
+
+        case 'eliminarAutor':
+            $controller= new autorController();
+            $controller->eliminarAutor($parametro[1]);
+            break;
+
+        case 'insertarAutor':
+                $controller= new autorController();
+                $controller->insertarAutor();
+                break;
+
         
         case 'hash':
             $pass="admin";
