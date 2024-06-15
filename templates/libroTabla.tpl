@@ -26,9 +26,9 @@
            <td>{$l->cantidad_pag}</td>
             <td>{$l->id_autor}</td>
             <td>
-          {if $usuario == 'administrador'}
-              <a href='verunAutor/{$l->id_autor}' action='autores' class='btn btn-success'>Ver autor</a>  
-              <a href='delete/{$l->id_libro}' class='btn btn-danger'>Eliminar</a>
+          {if $usuario == 'admin'}
+              <a href='verunAutor/{$l->id_autor1}' action='autores' class='btn btn-success'>Ver autor</a>  
+              <a href='eliminarLibro/{$l->id_libro}' class='btn btn-danger'>Eliminar</a>
               </td>
                          {/if}
         {/foreach}

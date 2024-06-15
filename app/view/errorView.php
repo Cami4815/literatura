@@ -1,11 +1,11 @@
 <?php
 require_once "view.php";
 
-class loginView extends view{
+class errorView extends view{
    
-    function login($msj = null){
+    function mostrarErr($msj){
        
         $this->smarty->assign("msj", $msj);
-        $this->smarty->display('login.tpl');
+        $this->smarty->display('error.tpl');
         }
          }

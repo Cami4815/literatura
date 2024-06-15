@@ -16,7 +16,7 @@ class loginController{
 
 
     function login(){
-        $this->view->loginView();
+        $this->view->login();
      
 
 
@@ -31,17 +31,17 @@ class loginController{
                 if($usuario && password_verify($contraseña, $usuario->contraseña )){
 
                     session_start();
-                    $_SESSION['USERNAME'] = $usuario->name;
                     $_SESSION['IS_LOGGED'] = true;
+                    $_SESSION['USERNAME'] = $usuario->name;
                     $_SESSION['ROLE'] = $usuario->rol;
 
-                    header("Location:" .BASE_URL. "libroTabla");
+                    header("Location:" . BASE_URL . "autores");
                     die();
                 }else{
-                    $this->view->loginView("usuario incorrecto");
+                    $this->view->login("usuario incorrecto");
                 }
             }else{
-                $this->view->loginView("faltan datos obligatorios");
+                $this->view->login("faltan datos obligatorios");
 
              }
              }
@@ -50,7 +50,7 @@ class loginController{
  function logout(){
     session_start();
     session_destroy();
-    header("Location:" .BASE_URL. "login");
+    header("Location:" . BASE_URL . "login");die();
    }
       
      

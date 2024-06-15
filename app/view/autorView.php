@@ -18,6 +18,11 @@ class autorView extends view{
     $this->smarty->display("fichadeautor.tpl");
     
   }
+  function editarAutor($autor){
+    $this->smarty->assign('autor', $autor);
+    $this->smarty->display('formAddAutor.tpl');
+   }
+
 
   
     

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.2, created on 2024-06-05 04:45:21
+/* Smarty version 4.5.2, created on 2024-06-14 23:47:54
   from 'C:\xampp\htdocs\Proyectos\ProyectosWeb2\literatura\templates\autores.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.2',
-  'unifunc' => 'content_665fd141ba10e2_99643633',
+  'unifunc' => 'content_666cba8abbf383_98491214',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '94ddfd975c675ebab27480d298a6645d704a723a' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Proyectos\\ProyectosWeb2\\literatura\\templates\\autores.tpl',
-      1 => 1717555187,
+      1 => 1718401105,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:finHtml.tpl' => 1,
   ),
 ),false)) {
-function content_665fd141ba10e2_99643633 (Smarty_Internal_Template $_smarty_tpl) {
+function content_666cba8abbf383_98491214 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:inicio.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <div class="container col-12">

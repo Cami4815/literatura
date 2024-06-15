@@ -13,7 +13,7 @@ class autorModel extends model{
     }   
     function eliminarAutor($id){
         $db=$this->crearConexion();
-        $resultado= $db->prepare("DELETE FROM autor WHERE id_autor1 = ?");
+        $resultado= $db->prepare("DELETE FROM autor WHERE id = ?");
         $resultado->execute([$id]);
     }
   
@@ -36,5 +36,11 @@ class autorModel extends model{
             $resultado->execute([$nombre,$apellido, $nacimiento]);
 
         }
+        function editarAutor($nombre,$apellido, $nacimiento){
+            $db=$this->crearConexion();
+            $resultado= $db->prepare("UPDATE  autor SET nombre = ?, apellido = ?, nacimiento = ? WHERE id_autor1");
+            $resultado->execute([$nombre,$apellido, $nacimiento]);
+
+            }
      }
         

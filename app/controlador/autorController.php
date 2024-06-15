@@ -6,7 +6,7 @@ class autorController {
 
 private $model;
 private $view;
-// private $err;
+private $err;
 
 
 public function __construct()
@@ -56,4 +56,33 @@ function verunAutor($id){
             }
         }
 }
+
+
+
+// function editarAutor(){
+
+//     if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+//         if (
+//             !empty($_POST['nombre']) &&
+//             !empty($_POST['apellido']) &&
+//             !empty($_POST['nacimiento'])
+
+//         ) {
+//             $nombre = $_POST['nombre'];
+//             $apellido = $_POST['apellido'];
+//             $nacimiento = $_POST['nacimiento'];
+//             $this->model->insertarAutor($nombre, $apellido, $nacimiento);
+
+//             header("Location:" . BASE_URL . "autores");
+//         } else {
+//             echo "faltan datos";
+//         }
+//     }
+// }
+function editarAutor($id)
+{ //LLEVA AL FORM PARA EDITAR EL LIBRO
+    $autor = $this->model->editarAutor($id);
+    $this->view->editarAutor($id);
  }
+  }

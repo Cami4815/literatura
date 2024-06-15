@@ -24,14 +24,14 @@ class libroModel extends model{
         
         function deleteLibro($id){
             $db=$this->crearConexion();
-            $resultado= $db->prepare("DELETE FROM libro WHERE id_libro = ?");
+            $resultado= $db->prepare("DELETE FROM libro WHERE id_libro= ?");
             $resultado->execute([$id]);
         }
 
-        function EditarLibro($nombre, $fechadepublicacion, $genero, $precio, $cantidadepaginas, $autores1, $id){
+        function EditarLibro($nombre, $fechadepublicacion, $genero, $precio, $cantidadepaginas, $autores1, $id_autor){
             $db=$this->crearConexion();
             $resultado= $db->prepare("UPDATE  libro SET nombre = ?, fecha_publicacion = ?, genero = ?, precio = ?,  cantidad_pag = ?, id_autor = ? WHERE id_libro = ?");
-            $resultado->execute([$nombre, $fechadepublicacion, $genero, $precio, $cantidadepaginas, $autores1, $id]);
+            $resultado->execute([$nombre, $fechadepublicacion, $genero, $precio, $cantidadepaginas, $autores1, $id_autor]);
 
             }
 

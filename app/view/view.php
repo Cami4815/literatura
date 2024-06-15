@@ -9,6 +9,6 @@ class view{
         $this->smarty=new Smarty();
         $this->smarty->assign("base", BASE_URL);
         $this->smarty->assign("loageado", AuthHelpers::isLogged());
-        $this->smarty->assign("usuario", AuthHelpers:: userName());
+        // $this->smarty->assign("usuario", AuthHelpers:: userName());
     }
 }

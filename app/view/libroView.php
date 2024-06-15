@@ -3,9 +3,9 @@ require_once "view.php";
 class libroView extends view{
 
  
-    function mostrarTabla($libro){
-    // var_dump ($libro); die;
+    function mostrarTabla($libro, $autor){
       $this->smarty->assign("libro",$libro);
+      $this->smarty->assign("autor",$autor);
       $this->smarty->display('libroTabla.tpl');
      }
      function mostrarLibro($libro){

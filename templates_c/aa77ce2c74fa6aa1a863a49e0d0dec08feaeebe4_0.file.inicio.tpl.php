@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.2, created on 2024-06-05 03:45:19
+/* Smarty version 4.5.2, created on 2024-06-05 21:28:16
   from 'C:\xampp\htdocs\Proyectos\ProyectosWeb2\literatura\templates\inicio.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.2',
-  'unifunc' => 'content_665fc32fa696d8_20413502',
+  'unifunc' => 'content_6660bc50409517_26103257',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'aa77ce2c74fa6aa1a863a49e0d0dec08feaeebe4' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Proyectos\\ProyectosWeb2\\literatura\\templates\\inicio.tpl',
-      1 => 1717551442,
+      1 => 1717615676,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_665fc32fa696d8_20413502 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6660bc50409517_26103257 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,6 +46,7 @@ function content_665fc32fa696d8_20413502 (Smarty_Internal_Template $_smarty_tpl)
   <li class="nav-item">           
  <nav class="nav nav-pills flex-column flex-sm-row">
    <?php } else { ?>
+    <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="mostrarLibro">Libros</a>
   <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="login">Login</a>
   <?php }?>
    <h5> “De los diversos instrumentos inventados por el hombre, el más asombroso es el libro; todos los demás son extensiones de su cuerpo… Sólo el libro es una extensión de la imaginación y la memoria”. Jorge Luis Borges.</h5>

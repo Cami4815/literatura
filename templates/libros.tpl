@@ -35,7 +35,9 @@
               <td>{$l->cantidad_pag}</td>
               <td>{$l->id_autor}</td>  
               <td><a href='getLibroId/{$l->id_libro}' class='btn btn-danger'> Ver Detalles</a></td>  
-           </tr>
+              <td><a href='eliminarLibro/{$l->id_libro}' class='btn btn-danger'> Eliminar</a></td>  
+
+              </tr>
         {/foreach}
         </tbody>
      </table>

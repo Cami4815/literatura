@@ -7,21 +7,25 @@ require_once "app/controlador/autorController.php";
 class libroController
 {
 
+    private $modelAutor;
     private $model;
     private $view;
-    // private $err;
+    private $err;
 
     public function __construct()
     {
         $this->model = new libroModel();
+        $this->modelAutor = new autorModel();
         $this->view = new libroView();
         // $this->err = new ErrorView();
     }
 
     function mostrarTabla()
-    {        ;
+    {   if(AuthHelpers::checkLogged()){     
         $libro = $this->model->verLibros();
-        $this->view->mostrarTabla($libro);
+        $autor=$this->modelAutor->verAutor();
+        $this->view->mostrarTabla($libro, $autor);
+     }
 
 
     }
@@ -70,7 +74,7 @@ class libroController
 
     function deleteLibro($id)
     {
-        $libro_borrar = $this->model->deleteLibro($id);
+        $this->model->deleteLibro($id);
         // Pasa el ID al método deleteLibro()
         header("Location:" . BASE_URL . "libroTabla");
 

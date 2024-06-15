@@ -46,7 +46,7 @@ define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] 
             $controller-> insertLibro();
             break;
         
-        case 'delete':
+        case 'eliminarLibro':
             $controller = new libroController();
             $controller->deleteLibro($parametro[1]);
              break;
@@ -90,10 +90,18 @@ define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] 
                 $controller= new autorController();
                 $controller->insertarAutor();
                 break;
+        case 'editarAutor':
+            $controller = new autorController();
+            $controller->editarAutor($parametro[1]);
+            break;
 
         
         case 'hash':
             $pass="admin";
+            $pass1="nalanerafofi";
+            echo password_hash($pass1, PASSWORD_DEFAULT);
+            
+
            
             echo password_hash($pass, PASSWORD_DEFAULT);
             break;
