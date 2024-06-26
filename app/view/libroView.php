@@ -7,15 +7,20 @@ class libroView extends view{
       $this->smarty->assign("libro",$libro);
       $this->smarty->assign("autor",$autor);
       $this->smarty->display('libroTabla.tpl');
+      
      }
      function mostrarLibro($libro){
         $this->smarty->assign("libro",$libro);
         $this->smarty->display('libros.tpl');
+        // $this->smarty->display('editarLibro.tpl');
       }
       
-    function EditarLibro($libro){
+    function EditarLibro($libro, $autor){
       $this->smarty->assign('libro', $libro);
+      $this->smarty->assign("autor", $autor);
       $this->smarty->display('editarLibro.tpl');
+     
+      // $this->smarty->display('libros.tpl');
      }
      function verunAutorLibros($libros){
       $this->smarty->assign("base", BASE_URL);

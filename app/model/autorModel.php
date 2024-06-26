@@ -13,13 +13,13 @@ class autorModel extends model{
     }   
     function eliminarAutor($id){
         $db=$this->crearConexion();
-        $resultado= $db->prepare("DELETE FROM autor WHERE id = ?");
+        $resultado= $db->prepare("DELETE FROM autor WHERE id_autor1 = ?");
         $resultado->execute([$id]);
     }
   
 
         
-    function mostrarunAutor($id){ 
+    function verunAutor($id){ 
     
         $db=$this->crearConexion();
             $sentencia = $db->prepare("SELECT * FROM autor a WHERE a.id_autor1 = ?");
@@ -36,11 +36,20 @@ class autorModel extends model{
             $resultado->execute([$nombre,$apellido, $nacimiento]);
 
         }
-        function editarAutor($nombre,$apellido, $nacimiento){
+        function editarAutor($nombre,$apellido, $nacimiento, $id){
             $db=$this->crearConexion();
-            $resultado= $db->prepare("UPDATE  autor SET nombre = ?, apellido = ?, nacimiento = ? WHERE id_autor1");
-            $resultado->execute([$nombre,$apellido, $nacimiento]);
+            $resultado= $db->prepare("UPDATE  autor SET nombre = ?, apellido = ?, nacimiento = ? WHERE id_autor1= ?");
+            $resultado->execute([$nombre,$apellido, $nacimiento, $id]);
 
             }
+            function getAutorId($id){
+                //abrimos la conexion;
+                $db = $this->crearConexion();
+                //Enviar la consulta
+                $sentencia = $db->prepare("SELECT * FROM autor WHERE id_autor1 = ?");
+                $sentencia->execute([$id]);
+                $autor = $sentencia->fetch(PDO::FETCH_OBJ);
+                return $autor;
+                 } 
      }
         

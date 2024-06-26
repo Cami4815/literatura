@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.2, created on 2024-06-14 23:56:12
+/* Smarty version 4.5.2, created on 2024-06-25 23:04:27
   from 'C:\xampp\htdocs\Proyectos\ProyectosWeb2\literatura\templates\libroTabla.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.2',
-  'unifunc' => 'content_666cbc7c5baa82_91755742',
+  'unifunc' => 'content_667b30db9ef759_75124603',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2fb0e742df7b93057a56cee924f2cc42b7f2783b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Proyectos\\ProyectosWeb2\\literatura\\templates\\libroTabla.tpl',
-      1 => 1718401825,
+      1 => 1719349463,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:finHtml.tpl' => 1,
   ),
 ),false)) {
-function content_666cbc7c5baa82_91755742 (Smarty_Internal_Template $_smarty_tpl) {
+function content_667b30db9ef759_75124603 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:formAddLibro.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <div class="container col-12">
@@ -63,14 +63,13 @@ $_smarty_tpl->tpl_vars['l']->do_else = false;
             <td><?php echo $_smarty_tpl->tpl_vars['l']->value->id_autor;?>
 </td>
             <td>
-          <?php if ($_smarty_tpl->tpl_vars['usuario']->value == 'admin') {?>
-              <a href='verunAutor/<?php echo $_smarty_tpl->tpl_vars['l']->value->id_autor1;?>
-' action='autores' class='btn btn-success'>Ver autor</a>  
+                    <td>
+              <a href='verunAutor/<?php echo $_smarty_tpl->tpl_vars['a']->value->id_autor1;?>
+' class='btn btn-danger'> Ver detalles del autor</a>
               <a href='eliminarLibro/<?php echo $_smarty_tpl->tpl_vars['l']->value->id_libro;?>
 ' class='btn btn-danger'>Eliminar</a>
               </td>
-                         <?php }?>
-        <?php
+                                 <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         </tbody>

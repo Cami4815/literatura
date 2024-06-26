@@ -9,21 +9,15 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="styles/styles.css">
 <body>
-<nav class="nav nav-pills flex-column flex-sm-row">
- 
+<nav class="nav nav-pills flex-column flex-sm-row"> 
+{* {if $rol == 'administrador'}  *}
+<a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="logout">¡Bienvenido! Cerrar Sesión</a> 
+<a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="mostrarLibro">Libros</a> <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="autores">Autores</a>
+ {* {elseif $IS_LOGGED} *}
+ <a class="flex-sm- fill text-sm-center nav-link active" aria-current="page" href="libroTabla">Tabla de libros 📚</a> 
+{* {else} *}
+<a class="flex-sm-fill text-sm-center nav-link active" aria-current="page"  href="login">Iniciar sesión</a> 
+<h5>“De los diversos instrumentos inventados por el hombre, el más asombroso es el libro; todos los demás son extensiones de su cuerpo… Sólo el libro es una extensión de la imaginación y la memoria”. Jorge Luis Borges.</h5> 
+{* {/if} *}
+</nav>
 
-{if $loageado}
-  <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="logout">Bienvenido! {$usuario} Cerrar Sesion</a>
-  <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="libroTabla">Tabla de libros 📚</a>
-  <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="mostrarLibro">Libros</a>
-  <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="autores">Autores</a>
-
-  <li class="nav-item">           
- <nav class="nav nav-pills flex-column flex-sm-row">
-   {else}
-    <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="mostrarLibro">Libros</a>
-  <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="login">Login</a>
-  {/if}
-   <h5> “De los diversos instrumentos inventados por el hombre, el más asombroso es el libro; todos los demás son extensiones de su cuerpo… Sólo el libro es una extensión de la imaginación y la memoria”. Jorge Luis Borges.</h5>
-  <nav class="nav nav-pills flex-column flex-sm-row">
-  </nav>

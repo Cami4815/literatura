@@ -6,8 +6,8 @@ class errorController {
     { 
         $this->err=new errorView();
     }
-    function mostrarErr($msj){
-        $this->err->mostrarErr($msj);
+    function mostrarErr($){
+        $this->err->mostrarErr($);
         
     }
 }

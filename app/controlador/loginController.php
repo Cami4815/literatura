@@ -31,11 +31,11 @@ class loginController{
                 if($usuario && password_verify($contraseña, $usuario->contraseña )){
 
                     session_start();
-                    $_SESSION['IS_LOGGED'] = true;
-                    $_SESSION['USERNAME'] = $usuario->name;
-                    $_SESSION['ROLE'] = $usuario->rol;
+                       $_SESSION['name'] = $usuario->name;
+                       $_SESSION['IS_LOGGED'] = true;
+                       $_SESSION['rol'] = $usuario->rol;
 
-                    header("Location:" . BASE_URL . "autores");
+                    header("Location:" . BASE_URL . "libroTabla");
                     die();
                 }else{
                     $this->view->login("usuario incorrecto");

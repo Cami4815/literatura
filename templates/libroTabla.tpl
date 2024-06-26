@@ -26,11 +26,12 @@
            <td>{$l->cantidad_pag}</td>
             <td>{$l->id_autor}</td>
             <td>
-          {if $usuario == 'admin'}
-              <a href='verunAutor/{$l->id_autor1}' action='autores' class='btn btn-success'>Ver autor</a>  
+          {* {if $rol == 'administrador'} *}
+          <td>
+              <a href='verunAutor/{$a->id_autor1}' class='btn btn-danger'> Ver detalles del autor</a>
               <a href='eliminarLibro/{$l->id_libro}' class='btn btn-danger'>Eliminar</a>
               </td>
-                         {/if}
+                         {* {/if} *}
         {/foreach}
         </tbody>
      </table>

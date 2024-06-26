@@ -11,4 +11,12 @@ class usuariosModel extends model {
     $usuario = $sentencia->fetch(PDO::FETCH_OBJ);
     return $usuario;
  }
+ function checkRol($usuario)
+    {
+        $db=$this->crearConexion();
+        $sentencia = $db->prepare("SELECT * FROM usuario WHERE usuario = ?");
+        $sentencia->execute([$usuario]);
+        $rol = $sentencia->fetch(PDO::FETCH_OBJ);
+        return $rol;
+    }
 }

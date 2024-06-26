@@ -1,5 +1,6 @@
 {include "inicio.tpl"}
-<form class="col-3 m-auto" action="editar" method="POST">
+<form class="col-3 m-auto" action="verificarLibro" method="POST">
+<input type="text" name="id" class="form-control " value="{$libro->id_libro}" hidden/>
     
       <legend class="text-center">Editar libro</legend>
       <div class="mb-3">
@@ -23,20 +24,18 @@
         <input type="number" name="paginas" class="form-control" value="{$libro->cantidad_pag}">
       </div>
       <div class="mb-3">
-        <label class="form-label">Autor</label>
-        <select name="autor_libro" class="form-control" value="{$libro->id_autor}">
-
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-        <option>6</option>
-        <option>7</option>
-        <option>8</option>
-        <option>9</option>
+      <label class="form-label">Autor</label>
+     
+        <select name="autor_libro" required >
+        <option>-- Seleccione --</option>
+        {foreach from=$autor item=a}
+           
+                <option value={$a->id_autor1}>{$a->nombre}</option>
+           
+        {/foreach}
         </select>
       </div>
-      
-      <button type="submit" class="btn btn-primary col-12">Submit</button>
+
+     
+      <button class="btn btn-primary col-12">Submit</button>
   </form>

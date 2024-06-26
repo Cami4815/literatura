@@ -3,7 +3,7 @@ require_once "view.php";
 
 class errorView extends view{
    
-    function mostrarErr($msj){
+    function mostrarErr($
        
         $this->smarty->assign("msj", $msj);
         $this->smarty->display('error.tpl');

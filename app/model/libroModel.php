@@ -18,7 +18,7 @@ class libroModel extends model{
            
             //Enviar la consulta
             $resultado= $db->prepare("INSERT INTO libro (nombre,fecha_publicacion,genero,precio,cantidad_pag, id_autor) VALUES (?,?,?,?,?,?)");
-            $resultado->execute([$nombre,$fechadepublicacion, $genero, $precio, $cantidadepaginas, $autores1,]);
+            $resultado->execute([$nombre,$fechadepublicacion, $genero, $precio, $cantidadepaginas, $autores1]);
 
         }
         

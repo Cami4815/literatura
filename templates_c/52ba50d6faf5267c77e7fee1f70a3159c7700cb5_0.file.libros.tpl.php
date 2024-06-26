@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.2, created on 2024-06-14 23:56:10
+/* Smarty version 4.5.2, created on 2024-06-25 05:55:50
   from 'C:\xampp\htdocs\Proyectos\ProyectosWeb2\literatura\templates\libros.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.2',
-  'unifunc' => 'content_666cbc7a3a3e77_37147565',
+  'unifunc' => 'content_667a3fc61bc711_57295356',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '52ba50d6faf5267c77e7fee1f70a3159c7700cb5' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Proyectos\\ProyectosWeb2\\literatura\\templates\\libros.tpl',
-      1 => 1718402166,
+      1 => 1719287745,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:finHtml.tpl' => 1,
   ),
 ),false)) {
-function content_666cbc7a3a3e77_37147565 (Smarty_Internal_Template $_smarty_tpl) {
+function content_667a3fc61bc711_57295356 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,6 +50,7 @@ function content_666cbc7a3a3e77_37147565 (Smarty_Internal_Template $_smarty_tpl)
           <th scope="col">Cantidad de paginas</th>
           <th scope="col">Autor</th>
           <th scope="col">Ver Libro</th>
+          <th scope="col">Editar libro</th>
         </tr>
         </thead>
       <tbody>
@@ -74,8 +75,11 @@ $_smarty_tpl->tpl_vars['l']->do_else = false;
 </td>  
               <td><a href='getLibroId/<?php echo $_smarty_tpl->tpl_vars['l']->value->id_libro;?>
 ' class='btn btn-danger'> Ver Detalles</a></td>  
+              <td><a href='EditarLibro/<?php echo $_smarty_tpl->tpl_vars['l']->value->id_libro;?>
+' class='btn btn-danger'> Editar</a></td>  
               <td><a href='eliminarLibro/<?php echo $_smarty_tpl->tpl_vars['l']->value->id_libro;?>
-' class='btn btn-danger'> Eliminar</a></td>  
+' class='btn btn-danger'> Eliminar</a></td>
+               
 
               </tr>
         <?php

@@ -28,10 +28,10 @@ static function userName() {
         if(session_status() != PHP_SESSION_ACTIVE) {
             session_start();
         }
-        if(!isset($_SESSION["USERNAME"])) {
+        if(!isset($_SESSION["name"])) {
             return false;
         }else{
-            return $_SESSION['USERNAME'];
+            return $_SESSION['name'];
         }
     }
     static function userRole(){
@@ -39,10 +39,10 @@ static function userName() {
         if(session_status() != PHP_SESSION_ACTIVE) {
             session_start();
         }
-        if(!isset($_SESSION["ROLE"])) {
+        if(!isset($_SESSION["rol"])) {
             return false;
         }else{
-            return $_SESSION['ROLE'];
+            return $_SESSION['rol'];
         }
 
     }

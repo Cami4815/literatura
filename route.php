@@ -51,7 +51,7 @@ define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] 
             $controller->deleteLibro($parametro[1]);
              break;
 
-        case 'editar':
+        case 'EditarLibro':
             $controller = new libroController();
             $controller->EditarLibro($parametro[1]);
             break;
@@ -63,7 +63,7 @@ define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] 
 
         case 'verificarLibro':
             $controller=new libroController();
-            $controller->verificarLibro($parametro[1]);
+            $controller->verificarLibro();
             break;
             
             case 'autores':
@@ -95,10 +95,21 @@ define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] 
             $controller->editarAutor($parametro[1]);
             break;
 
+            case'getAutorId':
+                $controller =new autorController();
+                $controller->getAutorId($parametro[1]);
+                break;
+    
+
+            case 'verificarAutor':
+                $controller=new autorController();
+                $controller->verificarAutor();
+                break;
+
         
         case 'hash':
             $pass="admin";
-            $pass1="nalanerafofi";
+            // $pass1="nalanerafofi";
             echo password_hash($pass1, PASSWORD_DEFAULT);
             
 

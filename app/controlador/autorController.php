@@ -16,14 +16,16 @@ public function __construct()
     // $this->err = new ErrorView();
 }
 
-function verAutor(){
+function verAutor()
+    {   if(AuthHelpers::checkLogged()){ 
  
     $autores = $this->model->verAutor();
     $this->view->tablaAutor($autores);
+     }
 }
 
 function verunAutor($id){
-    $un_autor=$this->model->mostrarunAutor($id);
+    $un_autor=$this->model->verunAutor($id);
     //buscar los autoree
     $this->view->verunAutor($un_autor);
  }
@@ -59,30 +61,40 @@ function verunAutor($id){
 
 
 
-// function editarAutor(){
+function verificarAutor(){
 
-//     if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-//         if (
-//             !empty($_POST['nombre']) &&
-//             !empty($_POST['apellido']) &&
-//             !empty($_POST['nacimiento'])
+        if (
+        
+            !empty($_POST['nombre']) &&
+            !empty($_POST['apellido']) &&
+            !empty($_POST['nacimiento'])
 
-//         ) {
-//             $nombre = $_POST['nombre'];
-//             $apellido = $_POST['apellido'];
-//             $nacimiento = $_POST['nacimiento'];
-//             $this->model->insertarAutor($nombre, $apellido, $nacimiento);
+        ) {
+            $nombre = $_POST['nombre'];
+            $apellido = $_POST['apellido'];
+            $nacimiento = $_POST['nacimiento'];
+            $id = $_POST['id'];
+            
+            $this->model->editarAutor($nombre, $apellido, $nacimiento, $id);
 
-//             header("Location:" . BASE_URL . "autores");
-//         } else {
-//             echo "faltan datos";
-//         }
-//     }
-// }
+            header("Location:" . BASE_URL . "autores");
+        } else {
+            echo "faltan datos";
+        }
+    }
+}
 function editarAutor($id)
 { //LLEVA AL FORM PARA EDITAR EL LIBRO
-    $autor = $this->model->editarAutor($id);
-    $this->view->editarAutor($id);
+    $autor = $this->model->getAutorId($id);
+    $this->view->editarAutor($autor);
  }
+ function getAutorId($id) {   
+        
+    $autor = $this->model->getAutorId($id);
+    $this->view->getAutorId($autor);
+
+}
+
   }

@@ -23,6 +23,7 @@
           <th scope="col">Cantidad de paginas</th>
           <th scope="col">Autor</th>
           <th scope="col">Ver Libro</th>
+          <th scope="col">Editar libro</th>
         </tr>
         </thead>
       <tbody>
@@ -35,7 +36,9 @@
               <td>{$l->cantidad_pag}</td>
               <td>{$l->id_autor}</td>  
               <td><a href='getLibroId/{$l->id_libro}' class='btn btn-danger'> Ver Detalles</a></td>  
-              <td><a href='eliminarLibro/{$l->id_libro}' class='btn btn-danger'> Eliminar</a></td>  
+              <td><a href='EditarLibro/{$l->id_libro}' class='btn btn-danger'> Editar</a></td>  
+              <td><a href='eliminarLibro/{$l->id_libro}' class='btn btn-danger'> Eliminar</a></td>
+               
 
               </tr>
         {/foreach}
